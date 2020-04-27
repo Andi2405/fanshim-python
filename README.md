@@ -5,6 +5,13 @@
 [![PyPi Package](https://img.shields.io/pypi/v/fanshim.svg)](https://pypi.python.org/pypi/fanshim)
 [![Python Versions](https://img.shields.io/pypi/pyversions/fanshim.svg)](https://pypi.python.org/pypi/fanshim)
 
+# Changed in this fork
+
+The `get_cpu_temp` function (in examples/automatic.py) from the original project does not work in Ubuntu on the Raspberry Pi. 
+This issue is fixed in this fork. That is the only difference.
+
+See examples/README.md
+
 # Installing
 
 Stable library from PyPi:

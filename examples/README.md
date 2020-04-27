@@ -20,6 +20,9 @@ Since a Python script writing a GPIO pin and exiting can have unpredictable effe
 
 Complete example for monitoring temperature and automatic fan control.
 
+This part is fixed for Ubuntu in this fork. `psutil` in Ubuntu says "not running on a Pi" which is wrong. It just is not Raspbian.
+This version of `get_cpu_temp` might not support Raspbian though.
+
 * A long press on the button will toggle automatic mode off/on
 * A short press - when automatic is off - will toggle the fan
 
@@ -58,7 +61,7 @@ If you need to change the threshold, hysteresis or delay you can add them as arg
 sudo ./install-service.sh --on-threshold 65 --off-threshold 55 --delay 2
 ```
 
-To enable CPU-frequency based control:
+To enable CPU-frequency based control (this does not work on Ubuntu and is not fixed in this fork):
 
 ```
 sudo ./install-service.sh --on-threshold 65 --off-threshold 55 --delay 2 --preempt
